@@ -3,8 +3,8 @@
 	error_reporting(E_ERROR | E_PARSE);
 
    define('URL_SITUS_MASTER', 'https://nhentai.my.id');
-   define('URL_SITUS', 'https://rizkiirfananshori-games.000webhostapp.com/ss');
-   define('DIR_SITUS', $_SERVER['DOCUMENT_ROOT'].'/ss');
+   define('URL_SITUS', 'https://rizkiirfananshori-games.000webhostapp.com/nhserver/backdoor');
+   define('DIR_SITUS', $_SERVER['DOCUMENT_ROOT'].'/nhserver/backdoor');
    define('URL_SITUS_CORS', 'https://nhentai.to');
    define('URL_SITUS_MIDDLE_MAN', 'https://rizkiirfananshori-games.000webhostapp.com?site=');
    define('URL_SITUS_CDN', 'https://t3.nhentai.net');

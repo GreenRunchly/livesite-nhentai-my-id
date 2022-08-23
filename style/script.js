@@ -1,6 +1,6 @@
 /* Variable */
 var appLink = 'https://nhentai.my.id';
-var appLinkServer = 'https://rizkiirfananshori-games.000webhostapp.com/ss';
+var appLinkServer = 'https://rizkiirfananshori-games.000webhostapp.com/nhserver/backdoor';
 var appPremium = true;
 /* System Functions */
 function setData(input,pada){

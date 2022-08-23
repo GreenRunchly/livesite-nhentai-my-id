@@ -6,7 +6,7 @@
     header("Content-type: image/jpeg");
 
     //mengambil konfigurasi
-    require $_SERVER['DOCUMENT_ROOT']."/config.php";
+    require $_SERVER['DOCUMENT_ROOT']."/nhserver/config.php";
     
     if (!empty($_GET['mediaid'])){
 		$mediaID = $_GET['mediaid'];

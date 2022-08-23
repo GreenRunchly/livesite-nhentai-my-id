@@ -6,7 +6,7 @@
     session_start();
 
     //mengambil konfigurasi
-    require $_SERVER['DOCUMENT_ROOT']."/config.php";
+    require $_SERVER['DOCUMENT_ROOT']."/nhserver/config.php";
 	
     require_once(DIR_SITUS.'/simple_html_dom.php');
 

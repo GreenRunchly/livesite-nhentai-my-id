@@ -7,7 +7,7 @@
     session_start();
 
     //mengambil konfigurasi
-    require $_SERVER['DOCUMENT_ROOT']."/config.php";
+    require $_SERVER['DOCUMENT_ROOT']."/nhserver/config.php";
 
     if (!empty($_GET['p'])){
         $QueryUserPage = stripslashes(trim(htmlspecialchars($_GET['p'])));
