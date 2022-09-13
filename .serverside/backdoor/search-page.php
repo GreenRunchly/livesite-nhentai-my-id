@@ -33,7 +33,8 @@
             $coverother = getStrBetween($element, 'data-src="', '"');
             $coverother = str_ireplace(URL_SITUS_RM_CDN, '', $coverother);
             if (!strpos($coverother, URL_SITUS_CDN)){
-                $coverother = URL_SITUS_CDN.$coverother;
+                ///$coverother = URL_SITUS_CDN.$coverother;
+                $coverother = $coverother;
             }
             $Listing[$id]['cover'] = $coverother;
             
