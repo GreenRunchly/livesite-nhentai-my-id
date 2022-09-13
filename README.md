@@ -10,7 +10,7 @@ Disarankan sudah berumur 18+
 
 ![Popular Page](https://nhentai.my.id/screenshots/popular-page.png)
 
-## Demo
+## Live Site
 
 Jika penasaran, bisa kunjungi https://nhentai.my.id
 
