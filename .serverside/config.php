@@ -6,7 +6,7 @@
    define('URL_SITUS', 'https://nhentai.my.id/.serverside/backdoor');
    define('DIR_SITUS', $_SERVER['DOCUMENT_ROOT'].'/.serverside/backdoor');
    define('URL_SITUS_CORS', 'https://nhentai.to');
-   define('URL_SITUS_MIDDLE_MAN', 'https://rizkiirfananshori-games.000webhostapp.com?site=');
+   define('URL_SITUS_MIDDLE_MAN', 'https://nhentai.my.id/.serverside/get-page?site=');
    define('URL_SITUS_CDN', 'https://t3.nhentai.net');
    define('URL_SITUS_RM_CDN', 'https://cdn.nload.xyz');
 
