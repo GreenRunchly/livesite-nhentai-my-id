@@ -23,16 +23,7 @@
     $serverData['title'] = 'Popular and New Uploads';
     
     foreach($html->find('div.container.index-container > div.gallery') as $element){
-        $id = getStrBetween($element, '<a href="/g/', '/" class="cover"');
-        $coverother = getStrBetween($element, 'data-src="', '"');
-        $coverother = str_ireplace(URL_SITUS_RM_CDN, '', $coverother);
-        if (!strpos($coverother, URL_SITUS_CDN)){
-            //$coverother = URL_SITUS_CDN.$coverother;
-            $coverother = $coverother;
-        }
-        $Listing[$id]['cover'] = $coverother;
-        $Listing[$id]['caption'] = getStrBetween($element, '<div class="caption">', '</div>');
-        $headerMeta['og-image'] = URL_SITUS.'/get-cover.php?media='.$Listing[$id]['cover'];
+        $Listing[$id]['cover'] = $element;
     }
     
     foreach($html->find('section.pagination > a') as $element){
