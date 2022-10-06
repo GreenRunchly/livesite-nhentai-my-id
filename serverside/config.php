@@ -55,6 +55,7 @@
         $resp = curl_exec($curl);
         curl_close($curl);
         return $resp;
+		error_log("get url :".$url)
     }   
    
 ?>
