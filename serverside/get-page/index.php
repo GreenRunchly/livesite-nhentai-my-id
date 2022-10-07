@@ -7,7 +7,8 @@
             if (strpos($siteUsed, "https://cdn.dogehls.xyz")){
                 $siteUsed = str_ireplace("cdn.dogehls.xyz","google.com",$siteUsed);
             }
-            echo getUrl($siteUsed);
+            echo $siteUsed;
+            //echo getUrl($siteUsed);
         }
     }
     die();
