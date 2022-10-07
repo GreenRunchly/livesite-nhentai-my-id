@@ -1,6 +1,6 @@
 /* Variable */
-var appLink = 'https://nhentai.my.id';
-var appLinkServer = 'https://nhentai.my.id/serverside/backdoor';
+var appLink = 'http://nhentai.local';
+var appLinkServer = 'http://nhentai.local/serverside/backdoor';
 var appPremium = true;
 /* System Functions */
 function setData(input,pada){
