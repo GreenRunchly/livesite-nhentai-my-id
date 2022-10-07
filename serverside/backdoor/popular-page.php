@@ -23,7 +23,7 @@
     $serverData['title'] = 'Popular and New Uploads';
     
     foreach($html->find('div.container.index-container > div.gallery') as $element){
-        $id = getStrBetween($element, '<a href="/g/', '/" class="cover"');
+        $id = getStrBetween($element, '<a href="/g/', '/" class="cover"');  
         $coverother = getStrBetween($element, 'data-src="', '"');
         $coverother = str_ireplace(URL_SITUS_RM_CDN, '', $coverother);
         if (!strpos($coverother, URL_SITUS_CDN)){
