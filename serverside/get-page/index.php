@@ -7,7 +7,6 @@
             if (preg_match("/cdn.dogehls.xyz/i", $siteUsed)){
                 $siteUsed = str_ireplace("cdn.dogehls.xyz","t3.nhentai.net",$siteUsed);
             }
-            //echo $siteUsed;
             echo getUrl($siteUsed);
         }
     }
