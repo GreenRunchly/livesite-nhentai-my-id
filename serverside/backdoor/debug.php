@@ -10,7 +10,7 @@
 	
     require_once(DIR_SITUS.'/simple_html_dom.php');
 
-	$html = getUrl(URL_SITUS_MIDDLE_MAN.URL_SITUS_CORS.'/g/364599');
-
+        $html = getUrl(URL_SITUS_MIDDLE_MAN.URL_SITUS_CORS.'/g/364599');
+        //https://cdn.dogehls.xyz/galleries/1947769/cover.jpg
 	echo $html;
 ?>
