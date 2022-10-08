@@ -83,12 +83,10 @@
         <div class="load-button loadmore loadmore-button" perhalaman="1"><p></p><i></i></div>
         <div class="load-button loadmore loadmore-button" perhalaman="2"><p></p><i></i></div>
         <div class="load-button loadmore loadmore-button" perhalaman="5"><p></p><i></i></div>
-    	<div class="load-button loadmore loadmore-button" perhalaman="10"><p></p><i></i></div>
-      	<div class="load-button loadmore loadmore-button" perhalaman="20"><p></p><i class="fad fa-spinner-third"></i></div>
+    	<div class="load-button loadmore loadmore-button" perhalaman="10"><p></p><i class="fad fa-spinner-third"></i></div>
+      	<div class="load-button loadmore loadmore-button" perhalaman="20"><p></p><i></i></div>
         <div class="load-button loadmore loadmore-button" perhalaman="40"><p></p><i></i></div>
-        <div class="load-button loadmore loadmore-button" perhalaman="60"><p></p><i></i></div>
-        <div class="load-button loadmore loadmore-button" perhalaman="80"><p></p><i></i></div>
-        <div class="load-button loadmore loadmore-button" perhalaman="100"><p></p><i></i></div>
+        <div class="load-button loadmore loadmore-button" perhalaman="50"><p></p><i></i></div>
     </div>
 </body>
 <script type="text/javascript">
@@ -164,7 +162,7 @@
         }
     });
     function statusGambar(perHalaman){
-        var perHalamanButton = [1,2,5,10,15,20,40,60,80,100];
+        var perHalamanButton = [1,2,5,10,15,20,40,50];
         perHalamanButton.forEach(function (item, index) {
             if (pagesLeft > item){
                 $(".loadmore[perhalaman="+item+"] i").removeClass('fad fa-spinner-third');
