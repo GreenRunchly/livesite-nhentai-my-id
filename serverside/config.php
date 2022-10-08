@@ -7,7 +7,7 @@
    define('DIR_SITUS', $_SERVER['DOCUMENT_ROOT'].'/serverside/backdoor');
    define('URL_SITUS_CORS', 'https://nhentai.to');
    define('URL_SITUS_MIDDLE_MAN', 'https://nhentai.my.id/serverside/get-page/?site=');
-   define('URL_SITUS_CDN', 'https://t3.nhentai.net');
+   define('URL_SITUS_CDN', 'https://cdn.dogehls.xyz');
    define('URL_SITUS_RM_CDN', 'https://cdn.nload.xyz');
 
    // Function to get the client IP address

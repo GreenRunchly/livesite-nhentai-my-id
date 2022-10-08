@@ -31,7 +31,7 @@
 		die('');
 	}
     
-    $tempfile = getUrl(URL_SITUS_MIDDLE_MAN.'https://i.nhentai.net/galleries/'.$mediaID.'/'.$pagesID.'.'.$mediaTypeFormat);
+    $tempfile = getUrl(URL_SITUS_MIDDLE_MAN.'https://cdn.dogehls.xyz/galleries/'.$mediaID.'/'.$pagesID.'.'.$mediaTypeFormat);
     echo $tempfile;
 
 ?>
