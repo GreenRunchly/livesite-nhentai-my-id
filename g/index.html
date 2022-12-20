@@ -81,12 +81,12 @@
     <div id="mediaLayout" class="tiles-gallery"></div>
     <div class="load-button-container">
         <div class="load-button loadmore loadmore-button" perhalaman="1"><p></p><i></i></div>
-        <div class="load-button loadmore loadmore-button" perhalaman="2"><p></p><i></i></div>
-        <div class="load-button loadmore loadmore-button" perhalaman="5"><p></p><i></i></div>
-    	<div class="load-button loadmore loadmore-button" perhalaman="10"><p></p><i class="fad fa-spinner-third"></i></div>
+        <div class="load-button loadmore loadmore-button" perhalaman="2"><p></p><i class="fad fa-spinner-third"></i></div>
+        <div class="load-button loadmore loadmore-button" perhalaman="3"><p></p><i></i></div>
+    	<!--<div class="load-button loadmore loadmore-button" perhalaman="10"><p></p><i class="fad fa-spinner-third"></i></div>
       	<div class="load-button loadmore loadmore-button" perhalaman="20"><p></p><i></i></div>
         <div class="load-button loadmore loadmore-button" perhalaman="40"><p></p><i></i></div>
-        <div class="load-button loadmore loadmore-button" perhalaman="50"><p></p><i></i></div>
+        <div class="load-button loadmore loadmore-button" perhalaman="50"><p></p><i></i></div>-->
     </div>
 </body>
 <script type="text/javascript">
@@ -162,7 +162,7 @@
         }
     });
     function statusGambar(perHalaman){
-        var perHalamanButton = [1,2,5,10,15,20,40,50];
+        var perHalamanButton = [1,2,3];
         perHalamanButton.forEach(function (item, index) {
             if (pagesLeft > item){
                 $(".loadmore[perhalaman="+item+"] i").removeClass('fad fa-spinner-third');
