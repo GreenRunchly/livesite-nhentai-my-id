@@ -6,7 +6,7 @@
     session_start();
 
     //mengambil konfigurasi
-    require $_SERVER['DOCUMENT_ROOT']."/serverside/config.php";
+    require $_SERVER['DOCUMENT_ROOT']."/nh/serverside/config.php";
 
     if (!empty($_GET['q'])){
 		$NHId = stripslashes(trim(htmlspecialchars($_GET['q'])));
