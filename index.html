@@ -22,9 +22,9 @@
     <meta property="twitter:image" id="meta-twitter-img" content="">
     
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="../style/style.css?ver=1">
-	<script src="../style/script.js?ver=2"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style/style.css?ver=1">
+    <script src="../style/script.js?ver=2"></script>
 
 </head>
 <style>
@@ -61,8 +61,8 @@
             </form>
             <div class="navbar-right">
                 <a class="navbar-button" id="randomg" href="/g"><i class="fal fa-repeat"></i></a>
-              	<a class="navbar-button" href="/search"><i class="fal fa-search"></i></a>
-              	<!--<a class="navbar-button" href="" target="_blank"><i class="fal fa-hand-holding-heart"></i></a>-->
+                <a class="navbar-button" href="/search"><i class="fal fa-search"></i></a>
+                <!--<a class="navbar-button" href="" target="_blank"><i class="fal fa-hand-holding-heart"></i></a>-->
             </div>
         </div>
         <div class="header-layout-top">
@@ -77,8 +77,8 @@
     $("#randomg").attr('href','/g?q='+randomG);
     lamanDituju = window.location.search;
     $.post(appLinkServer + "/popular-page.php" + lamanDituju,{}, function(data, status){
-    	console.log('Page loaded');	
-    	console.log(data);
+        console.log('Page loaded'); 
+        console.log(data);
         $('#meta-title').html(data.meta.title);
         $('#meta-keywords').html(data.meta.keywords);
         $('#meta-fb-url').attr('content',data.meta.url);
@@ -95,9 +95,9 @@
         });        
         $('#paginationLayout').append(pagination); 
 
-        media = '';
+        media = [];
         $.each(data.listing, function( index, value ) {
-            media += '<a class="media-gallery" href="/g?q='+index+'"><div class="media-gallery-thumb"><img src="'+appLinkServer+'/get-cover.php?media='+value.cover+'"></div><div class="media-gallery-desc"><h2>'+value.caption+'...</h2></div></a>';
+            media[] += '<a class="media-gallery" href="/g?q='+index+'"><div class="media-gallery-thumb"><img src="'+appLinkServer+'/get-cover.php?media='+value.cover+'"></div><div class="media-gallery-desc"><h2>'+value.caption+'...</h2></div></a>';
         });
 
         $('#mediaLayout').append(media); 
