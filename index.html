@@ -98,9 +98,9 @@
         medialazy = [];
         media = '';
         $.each(data.listing, function( index, value ) {
-            medialazy[] = '<a class="media-gallery" href="/g?q='+index+'"><div class="media-gallery-thumb"><img src="'+appLinkServer+'/get-cover.php?media='+value.cover+'"></div><div class="media-gallery-desc"><h2>'+value.caption+'...</h2></div></a>';
+            medialazy[index] = '<a class="media-gallery" href="/g?q='+index+'"><div class="media-gallery-thumb"><img src="'+appLinkServer+'/get-cover.php?media='+value.cover+'"></div><div class="media-gallery-desc"><h2>'+value.caption+'...</h2></div></a>';
         });
-
+        console.log(medialazy);
         $('#mediaLayout').append(media); 
     });
 </script>
