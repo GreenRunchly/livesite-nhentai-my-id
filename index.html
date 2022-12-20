@@ -99,40 +99,20 @@
         medialazy = '';
         media = [];
         listingmedia = data.listing;
+        listno = 1;
         $.each(data.listing, function( index, value ) {
-            medialazy += '<a class="media-gallery" href="/g?q='+index+'"><div class="media-gallery-thumb" thumbid="'+index+'" thumbloaded="2"></div><div class="media-gallery-desc"><h2>'+value.caption+'...</h2></div></a>';
-            media[index] = '<img onload="statusGambar('+index+');" src="'+appLinkServer+'/get-cover.php?media='+value.cover+'">';
+            medialazy += '<a class="media-gallery" href="/g?q='+index+'"><div class="media-gallery-thumb" thumbid="'+listno+'" thumbloaded="2"></div><div class="media-gallery-desc"><h2>'+value.caption+'...</h2></div></a>';
+            media[listno] = '<img onload="statusGambar('+listno+');" src="'+appLinkServer+'/get-cover.php?media='+value.cover+'">';
+            listno ++;
         });
-        console.log(medialazy);
-
-        refreshimages = setInterval(function(){
-
-            $.each(data.listing, function( index, value ) {
-                $("div[thumbid="+index+"][thumbloaded=2]").html(media[index]);
-                $("div[thumbid="+index+"][thumbloaded=2]").attr('thumbloaded',0);
-                $("div[thumbloaded=2]").attr('thumbloaded',1);
-                //$("div[thumbloaded=2]").attr('thumbloaded',1);
-                //$("div[thumbloaded=2]").attr('thumbloaded',1);
-                //console.log('load');
-            });
-            clearInterval(refreshimages);
-        },1000);
-
-        
+        //console.log(medialazy);    
         $('#mediaLayout').append(medialazy); 
+        $("div[thumbid=1]").html(media[1]);
     });
 
-    function statusGambar(imgid){
+    function statusGambar(listmediano){
 
-        $("div[thumbloaded=1]").attr('thumbloaded',2);
-        $.each(listingmedia, function( index, value ) {
-            $("div[thumbid="+index+"][thumbloaded=2]").html(media[index]);
-            $("div[thumbid="+index+"][thumbloaded=2]").attr('thumbloaded',0);
-            $("div[thumbloaded=2]").attr('thumbloaded',1);
-            //$("div[thumbloaded=2]").attr('thumbloaded',1);
-            //$("div[thumbloaded=2]").attr('thumbloaded',1);
-            //console.log('load');
-        });
+        $("div[thumbid="+(listmediano+1)+"]").html(media[listmediano+1]);
         console.log("stus");
         
     };
