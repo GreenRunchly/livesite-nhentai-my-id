@@ -102,11 +102,25 @@
             });        
             $('#paginationLayout').append(pagination); 
 
-            media = '';
+            medialazy = '';
+            media = [];
+            listingmedia = data.listing;
+            listno = 1;
             $.each(data.listing, function( index, value ) {
-                media += '<a class="media-gallery" href="/g?q='+index+'"><div class="media-gallery-thumb"><img src="'+appLinkServer+'/get-cover.php?media='+value.cover+'"></div><div class="media-gallery-desc"><h2>'+value.caption+'...</h2></div></a>';
-            });        
-            $('#mediaLayout').append(media); 
+                medialazy += '<a class="media-gallery" href="/g?q='+index+'"><div class="media-gallery-thumb" thumbid="'+listno+'" thumbloaded="2"></div><div class="media-gallery-desc"><h2>'+value.caption+'...</h2></div></a>';
+                media[listno] = '<img onload="statusGambar('+listno+');" src="'+appLinkServer+'/get-cover.php?media='+value.cover+'">';
+                listno ++;
+            });
+            //console.log(medialazy);    
+            $('#mediaLayout').append(medialazy); 
+            $("div[thumbid=1]").html(media[1]);
         }
     });
+
+    function statusGambar(listmediano){
+
+        $("div[thumbid="+(listmediano+1)+"]").html(media[listmediano+1]);
+        console.log("stus");
+        
+    };
 </script>
