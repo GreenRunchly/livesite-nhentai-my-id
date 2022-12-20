@@ -101,6 +101,7 @@
             //medialazy += '<a class="media-gallery" href="/g?q='+index+'"><div class="media-gallery-thumb" thumbid="'+index+'"></div><div class="media-gallery-desc"><h2>'+value.caption+'...</h2></div></a>';
             media[index] = '<img onload="statusGambar('+index+');" src="'+appLinkServer+'/get-cover.php?media='+value.cover+'">';
         });
+        
         console.log(medialazy);
         $refreshimages = setInterval(function(){
             console.log("count");;
