@@ -23,7 +23,8 @@
     
     if (!empty($QueryUser)){
     
-        $html = str_get_html(getUrl(URL_SITUS_MIDDLE_MAN.'&site_encode='.base64_encode(URL_SITUS_CORS.'/search?q='.$QueryUser)));
+        //$html = str_get_html(getUrl(URL_SITUS_MIDDLE_MAN.'&site_encode='.base64_encode(URL_SITUS_CORS.'/search?q='.$QueryUser)));
+        $html = str_get_html(getUrl(URL_SITUS_MIDDLE_MAN.URL_SITUS_CORS.'/search?q='.$QueryUser));
         
         $serverData['title'] = $QueryUserInput;
         $serverData['count'] = getStrBetween($html->find('h2',0), '<h2>', ' Results</h2>');
@@ -63,6 +64,7 @@
         
     }
     die();
+    ///Down there is an old method
 ?>
 <div class="header-layout">
     <div class="navbar">
