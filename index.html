@@ -95,13 +95,17 @@
         });        
         $('#paginationLayout').append(pagination); 
 
-        medialazy = [];
-        media = '';
+        medialazy = '';
+        
         $.each(data.listing, function( index, value ) {
-            medialazy[index] = '<a class="media-gallery" href="/g?q='+index+'"><div class="media-gallery-thumb"><img src="'+appLinkServer+'/get-cover.php?media='+value.cover+'"></div><div class="media-gallery-desc"><h2>'+value.caption+'...</h2></div></a>';
+            //medialazy += '<a class="media-gallery" href="/g?q='+index+'"><div class="media-gallery-thumb" thumbid="'+index+'"></div><div class="media-gallery-desc"><h2>'+value.caption+'...</h2></div></a>';
+            media[index] = '<img onload="statusGambar('+index+');" src="'+appLinkServer+'/get-cover.php?media='+value.cover+'">';
         });
         console.log(medialazy);
-        
-        $('#mediaLayout').append(media); 
+        $refreshimages = setInterval(function(){
+            console.log("count");;
+        },1000);
+
+        $('#mediaLayout').append(medialazy); 
     });
 </script>
