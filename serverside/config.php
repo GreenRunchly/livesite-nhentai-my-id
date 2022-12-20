@@ -3,10 +3,10 @@
 	error_reporting(E_ERROR | E_PARSE);
 
    define('URL_SITUS_MASTER', 'https://nhentai.my.id');
-   define('URL_SITUS', 'https://nhentai.my.id/serverside/backdoor');
-   define('DIR_SITUS', $_SERVER['DOCUMENT_ROOT'].'/serverside/backdoor');
+   define('URL_SITUS', 'https://playcirclescolors.my.id/nh/serverside/backdoor');
+   define('DIR_SITUS', $_SERVER['DOCUMENT_ROOT'].'/nh/serverside/backdoor');
    define('URL_SITUS_CORS', 'https://nhentai.to');
-   define('URL_SITUS_MIDDLE_MAN', 'https://nhentai.my.id/serverside/get-page/?site=');
+   define('URL_SITUS_MIDDLE_MAN', 'https://playcirclescolors.my.id/nh/serverside/get-page/?site=');
    define('URL_SITUS_CDN', 'https://cdn.dogehls.xyz');
    define('URL_SITUS_RM_CDN', 'https://cdn.nload.xyz');
 
