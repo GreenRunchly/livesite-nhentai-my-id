@@ -23,8 +23,8 @@
     
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../style/style.css?ver=1">
-    <script src="../style/script.js?ver=2"></script>
+    <link rel="stylesheet" type="text/css" href="style/style.css?ver=1">
+    <script src="style/script.js?ver=2"></script>
 
 </head>
 <style>
@@ -76,6 +76,7 @@
     var randomG = Math.floor(Math.random() * 250000);
     $("#randomg").attr('href','/g?q='+randomG);
     lamanDituju = window.location.search;
+    listingmedia = {};
     $.post(appLinkServer + "/popular-page.php" + lamanDituju,{}, function(data, status){
         console.log('Page loaded'); 
         console.log(data);
@@ -96,16 +97,43 @@
         $('#paginationLayout').append(pagination); 
 
         medialazy = '';
-        media = '';
+        media = [];
+        listingmedia = data.listing;
         $.each(data.listing, function( index, value ) {
-            //medialazy += '<a class="media-gallery" href="/g?q='+index+'"><div class="media-gallery-thumb" thumbid="'+index+'"></div><div class="media-gallery-desc"><h2>'+value.caption+'...</h2></div></a>';
+            medialazy += '<a class="media-gallery" href="/g?q='+index+'"><div class="media-gallery-thumb" thumbid="'+index+'" thumbloaded="2"></div><div class="media-gallery-desc"><h2>'+value.caption+'...</h2></div></a>';
             media[index] = '<img onload="statusGambar('+index+');" src="'+appLinkServer+'/get-cover.php?media='+value.cover+'">';
         });
-
         console.log(medialazy);
-        $refreshimages = setInterval(function(){
-            console.log("count");;
+
+        refreshimages = setInterval(function(){
+
+            $.each(data.listing, function( index, value ) {
+                $("div[thumbid="+index+"][thumbloaded=2]").html(media[index]);
+                $("div[thumbid="+index+"][thumbloaded=2]").attr('thumbloaded',0);
+                $("div[thumbloaded=2]").attr('thumbloaded',1);
+                //$("div[thumbloaded=2]").attr('thumbloaded',1);
+                //$("div[thumbloaded=2]").attr('thumbloaded',1);
+                //console.log('load');
+            });
+            clearInterval(refreshimages);
         },1000);
+
+        
         $('#mediaLayout').append(medialazy); 
     });
+
+    function statusGambar(imgid){
+
+        $("div[thumbloaded=1]").attr('thumbloaded',2);
+        $.each(listingmedia, function( index, value ) {
+            $("div[thumbid="+index+"][thumbloaded=2]").html(media[index]);
+            $("div[thumbid="+index+"][thumbloaded=2]").attr('thumbloaded',0);
+            $("div[thumbloaded=2]").attr('thumbloaded',1);
+            //$("div[thumbloaded=2]").attr('thumbloaded',1);
+            //$("div[thumbloaded=2]").attr('thumbloaded',1);
+            //console.log('load');
+        });
+        console.log("stus");
+        
+    };
 </script>
