@@ -8,7 +8,7 @@ Disarankan sudah berumur 18+
 
 ## Screenshots
 
-![Popular Page](https://github.com/GreenRunchly/nhentai-my-id/blob/main/screenshots/popular-page.png?raw=true)
+[Warning! 18+](https://github.com/GreenRunchly/nhentai-my-id/blob/main/screenshots/popular-page.png?raw=true)
 
 ## Live Site
 
