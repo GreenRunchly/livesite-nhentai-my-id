@@ -31,7 +31,7 @@
 		die('');
 	}
     
-    $tempfile = getUrl('https://cdn.dogehls.xyz/galleries/'.$mediaID.'/'.$pagesID.'.'.$mediaTypeFormat);
+    $tempfile = getUrl(URL_SITUS_CDN.'/galleries/'.$mediaID.'/'.$pagesID.'.'.$mediaTypeFormat);
     echo $tempfile;
 
 ?>
